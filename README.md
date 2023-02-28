@@ -9,12 +9,6 @@ The results of [1] suggest that there should be many more instances of contextua
 
 Can we leverage the recent success of natural language processing on quantum computers [7], [8] to learn a quantum model for contextual natural language data? In what follows, we'll take steps towards such models on a pair of datasets.  The first dataset [8] consists of pairs of phrases that are combined into a compound phrase whose meaning is ambiguous.  Annotators are then asked to rate how well the two meanings are consistent with each other.  We turn these into the emprical models of [4] and train a parameterized quantum circuit to reproduce its entries. We use a variation on the lambeq pipeline [9] to turn input sentences into PennyLane quantum circuits.  For the second dataset we use the computed empirical models of [10] downloaded from [11].  Again, we train parameterized quantum circuits to reproduce its entries.  For an example of an emprical model see Figure 1 in the notebook.
 
-<br>
-
-![Alt text](word-pair-empircal-model.png "a title") 
-*Figure 1: An example empirical model from [10]. Here the measurement contexts are different combinations of words. Each word has two possible meanings (ie, measurement outcomes) which is tabulated in the columns.  The resulting probability distribution for each row is computed.*  In what follows we encode each measurement context as a parameterized quantum circuit and train the model to reproduce the table.
-
-<br>
 
 ## References
 
